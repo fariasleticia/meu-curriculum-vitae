@@ -11,102 +11,159 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@100&display=swap">
     <style>
+        /* estilização de itens gerais da página */
         body {
-            margin:0px;
+            margin: 0px;
             color: white;
             background-image: url("images/imagem-fundo.jpg");
             background-size: contain;
             background-repeat: repeat;
         }
-        /* estilização do cabeçalho (apresentação inicial) */
-        header {
-            display: flex;
-            align-content: center;
-            text-align: center;
-            flex-direction: column;
-            padding: 11% 30% 20%;
-            color: white;
-            background-image: url("images/imagem-cabecalho.jpg");
-            background-size: cover;
-        }
-        header > h1 {
-            font-family: 'Euphoria Script', cursive;
-            font-size: 500%;
-            margin-bottom: 5%;
-        }
-        header > h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 120%;
-        }
-        /* estilização de indicadores padrão da página */
+
         h2 {
             font-family: 'Euphoria Script', cursive;
             font-size: 400%;
             margin-bottom: 10px;
         }
+
         h3 {
             font-family: 'DM Serif Display', serif;
             font-weight: bolder;
             font-size: 200%;
         }
+
         h4 {
             font-family: 'DM Serif Display', serif;
             font-size: 150%;
             margin-bottom: 0%;
             letter-spacing: 1px;
         }
-        p, li {
+
+        p,
+        li {
             font-family: 'DM Sans', sans-serif;
         }
+
         section {
             padding: 0.5% 10% 3.5%;
         }
-        /* estilização da seção 'sobre mim' (descrição, foto e dados pessoais) */
+
+        /* estilização do cabeçalho (apresentação inicial) */
+        header {
+            display: flex;
+            align-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15% 30% 23%;
+            color: white;
+            background-image: url("images/imagem-cabecalho.jpg");
+            background-size: cover;
+        }
+
+        header>h1 {
+            font-family: 'Euphoria Script', cursive;
+            font-size: 500%;
+            margin-bottom: 5%;
+        }
+
+        header>h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 120%;
+        }
+
+        /* estilização da seção 'sobre mim/objetivo profissional' (descrição, foto e dados pessoais) */
+        .about-objective {
+            padding-top: 2.5%;
+            padding-bottom: 4.5%;
+        }
+
         .info-me {
             display: flex;
+            padding-top: 2%;
         }
+
         #description {
             width: 50%;
             align-self: center;
             margin-left: 8%;
             margin-right: 5%;
             text-align: right;
-            line-height: 250%;
+            line-height: 230%;
         }
+
         #photo-info {
             width: 50%;
             align-self: center;
             margin-left: 5%;
             text-align: left;
         }
+
         #my-photo {
-            width: 50%;
+            width: 60%;
             border-radius: 50%;
             border-style: solid;
             border-color: whitesmoke;
             border-width: 10px;
         }
-        #photo-info > ul {
+
+        #photo-info>ul {
             list-style-type: none;
             padding-left: 0px;
         }
-        #photo-info > ul > li {
+
+        #photo-info>ul>li {
             font-size: 110%;
             line-height: 150%;
         }
-        /* estilização da seção de formação */
+
+        /* estilização da seção de formação + seção de habilidades*/
         .formation {
             background-image: url("images/imagem-formacao.png");
             background-size: cover;
+            padding-top: 1%;
+            padding-bottom: 5%;
         }
-        .courses {
+
+        .courses,
+        .skills {
             display: flex;
-            padding: 0px;
         }
-        .courses > div {
-            width:50%;
+
+        .courses>div,
+        .skills>div {
+            width: 50%;
+        }
+
+        /* estilização da seção de habilidades */
+        .my-skills {
+            padding-top: 4%;
+            padding-bottom: 5%;
+        }
+
+        .soft-list {
+            margin-left: 5%;
+            margin-right: 2%;
+        }
+
+        .hard-list {
+            margin-right: 5%;
+            margin-left: 2%;
+        }
+
+        .skills {
+            margin-top: 3.5%;
+        }
+
+        .skills>div>ul>li {
+            margin-bottom: 2%;
+            text-align: justify;
+            list-style-type: circle;
+        }
+
+        .skills>div>ul {
+            padding-left: 7%;
+            padding-right: 2%;
         }
     </style>
 </head>
@@ -115,21 +172,26 @@
     <div class="container">
         <header>
             <h1>Leticia F. Cassimiro</h1>
-            <h3>Estudante do Ensino Médio, envolvida em pesquisas e projetos nas áreas de Linguagens e Ciências Humanas</h3>
+            <h3>Estudante do Ensino Médio, envolvida em pesquisas e projetos nas áreas de Linguagens e Ciências Humanas
+            </h3>
         </header>
-        <section class="about-me">
-            <h2>Olá! Sou a Leticia.</h2>
+        <section class="about-objective">
+            <h2>Meu objetivo profissional</h2>
             <div class="info-me">
                 <div id="description">
-                    <p style="font-size: 150%; text-align: right;">
-                        Sou uma estudante do <b>2º ano do Novo Ensino Médio</b> no SESI e do Curso Técnico de <b>Desenvolvimento de Sistemas</b> no SENAI. 
-                        Tenho <b>16 anos</b> e planejo cursar <b>Jornalismo</b>, por isso, atualmente, busco desenvolver minhas habilidades na <b>escrita</b>, 
-                        <b>comunicação</b> e <b>produção audiovisual</b>. Com isso, procuro expor minhas <b>visões de mundo</b>, analisando criticamente 
-                        o <b>cenário social e político</b> da atualidade.
+                    <p style="font-size: 130%; text-align: right;">
+                        Sou uma estudante do 2º ano do <b>Novo Ensino Médio</b> no SESI e do Curso Técnico de
+                        <b>Desenvolvimento de Sistemas</b> no SENAI. Tenho 16 anos e planejo cursar <b>Jornalismo</b> e
+                        <b>Letras</b> na <b>Universidade de São Paulo</b>, integrando Linguagens com Ciências Humanas,
+                        ao trabalhar com tradução, revisão, pesquisa, edição, análise e produção de textos literários e
+                        não-literários; bem como de materiais audiovisuais. Assim, busco <b>desenvolver minhas
+                            habilidades</b>, a fim de expor minhas <b>visões de mundo</b> e analisar criticamente o
+                        <b>cenário social e político</b> atual.
                     </p>
                 </div>
                 <div id="photo-info">
-                    <img id="my-photo" src="images\minha-foto.png" alt="Fotografia de mim, Leticia, de vestido preto e cabelo solto, abaixada sobre uma mesa de toalha vermelha e assinando um livro, chamado 'Fragmenta Amoris'.">
+                    <img id="my-photo" src="images\minha-foto.png"
+                        alt="Fotografia de mim, Leticia, de vestido preto e cabelo solto, abaixada sobre uma mesa de toalha vermelha e assinando um livro, chamado 'Fragmenta Amoris'.">
                     <h4>Dados pessoais:</h4>
                     <ul>
                         <li><b>Nascimento:</b> 16/10/2006</li>
@@ -145,56 +207,66 @@
             <div class="courses">
                 <div>
                     <h3>Formação acadêmica</h3>
-                    <p><b>Ensino Fundamental II e Novo Ensino Médio</b><br>Centro Educacional SESI 416 - São Bernardo do Campo<br>Previsão de término: 12/2024</p>
-                    <p><b>Curso Técnico de Desenvolvimento de Sistemas</b><br>SENAI Almirante Tamandaré<br>Previsão de término: 12/2024</p>
+                    <p><b>Ensino Fundamental II e Novo Ensino Médio</b><br>Centro Educacional SESI 416 - São Bernardo do
+                        Campo<br>Previsão de término: 12/2024</p>
+                    <p><b>Curso Técnico de Desenvolvimento de Sistemas</b><br>SENAI Almirante Tamandaré<br>Previsão de
+                        término: 12/2024</p>
                 </div>
                 <div>
                     <h3>Atividades extracurriculares</h3>
-                    <p><b>Fisk English Course</b><br>Certificate of Achievement MET (Michigan Language Assessment)<br>Data de conclusão: 06/2022</p>
-                    <p><b>Escrita Criativa</b><br>Laboratório de Jovens Escritores - Projeto Palavralém<br>Carga Horária: 64 horas | Data de conclusão: 12/2022</p>
-                    <p><b>Fundamentos e Perspectivas do Mundo Contemporâneo</b><br>Tópicos Avançados - SESI SP<br>Data de conclusão: 06/2023</p>
-                    <p><b>Economia Circular</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 20 horas | Data de conclusão: 05/2023</p>
-                    <p><b>Competência Transversal - Segurança no Trabalho</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 14 horas | Data de conclusão: 05/2023</p>
-                    <p><b>Privacidade e Proteção aos Dados (LGPD)</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 20 horas | Data de conclusão: 05/2023</p>
-                    <p><b>Desvendando o 5G</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 20 horas | Data de conclusão: 05/2023</p>
+                    <p><b>Fisk English Course</b><br>Certificate of Achievement MET (Michigan Language
+                        Assessment)<br>Data de conclusão: 06/2022</p>
+                    <p><b>Escrita Criativa</b><br>Laboratório de Jovens Escritores - Projeto Palavralém<br>Carga
+                        Horária: 64 horas | Data de conclusão: 12/2022</p>
+                    <p><b>Fundamentos e Perspectivas do Mundo Contemporâneo</b><br>Tópicos Avançados - SESI SP<br>Data
+                        de conclusão: 06/2023</p>
+                    <p><b>Economia Circular</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 20 horas |
+                        Data de conclusão: 05/2023</p>
+                    <p><b>Competência Transversal - Segurança no Trabalho</b><br>Aperfeiçoamento Profissional -
+                        SENAI<br>Carga Horária: 14 horas | Data de conclusão: 05/2023</p>
+                    <p><b>Privacidade e Proteção aos Dados (LGPD)</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga
+                        Horária: 20 horas | Data de conclusão: 05/2023</p>
+                    <p><b>Desvendando o 5G</b><br>Aperfeiçoamento Profissional - SENAI<br>Carga Horária: 20 horas | Data
+                        de conclusão: 05/2023</p>
                 </div>
             </div>
         </section>
-        <!-- <section class="skills">
+        <section class="my-skills">
             <h2>Minhas habilidades</h2>
-            <h4>Hard Skills</h4>
-            <ul class="skills-list">
-                <li>[habilidade]</li>
-                <li>[habilidade]</li>
-                <li>[habilidade]</li>
-                <li>[habilidade]</li>
-            </ul>
-            <h4>Soft Skills</h4>
-            <ul class="skills-list">
-                <li>Organização do ambiente e equipamentos de estudo</li>
-                <li>Desenvolvimento de pesquisas autorais fundamentadas</li>
-                <li>Criatividade e inovação na resolução de problemas</li>
-                <li>Adaptabilidade à diferentes ambientes</li>
-                <li>Ética e flexibilidade na tomada de decisões individuais e coletivas</li>
-                <li>Pensamento crítico para diagnóstico de problemáticas e outras situações</li>
-                <li>Produtividade e gerenciamento de tempo para realização de atividades</li>
-                <li>Domínio na produção de textos de variados gêneros literários em Português e Inglês</li>
-                <li>Domínio de editores de vídeo em nível intermediário para produção de documentos audiovisuais</li>
-                <li>Competência crítica para análise de textos e outras produções</li>
-            </ul>
+            <div class="skills">
+                <div class="hard-list">
+                    <h4>Hard Skills</h4>
+                    <hr>
+                    <ul>
+                        <li>Nível avançado (C1) em <b>escrita e compreensão auditiva</b> da <b>Língua Inglesa</b>;</li>
+                        <li>Conhecimento intermediário do <b>Pacote Office 360</b> (Word, Powerpoint e Excel);</li>
+                        <li>Domínio avançado de <b>linguagens de marcação</b> (HTML5 e CSS3);</li>
+                        <li>Domínio básico da <b>linguagem Python</b>;</li>
+                        <li>Conhecimento e facilidade de uso da <b>plataforma GitHub</b>;</li>
+                        <li>Domínio avançado de <b>Prompts de Comando</b> (Windows e Linux);</li>
+                        <li>Domínio intermediário de <b>editores de vídeo</b> para produções audiovisuais;</li>
+                        <li>Domínio intermediário do <b>editor Canva</b>.</li>
+                    </ul>
+                </div>
+                <div class="soft-list">
+                    <h4>Soft Skills</h4>
+                    <hr>
+                    <ul>
+                        <li><b>Organização</b> do ambiente de trabalho e dos equipamentos de estudo;</li>
+                        <li>Desenvolvimento de <b>pesquisas autorais bem fundamentadas</b>;</li>
+                        <li><b>Criatividade e inovação</b> na resolução de problemas;</li>
+                        <li><b>Adaptabilidade</b> à diferentes ambientes e situações;</li>
+                        <li><b>Ética e flexibilidade</b> na <b>tomada de decisões</b> individuais e coletivas;</li>
+                        <li><b>Pensamento crítico</b> para diagnóstico de problemáticas;</li>
+                        <li>Produtividade e <b>gerenciamento de tempo</b> para realização de atividades;</li>
+                        <li>Domínio na <b>produção de textos de variados gêneros</b> literários (em Português e Inglês);
+                        </li>
+                        <li>Competência crítica para <b>análise de textos</b> e outras produções.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <section class="objectives and experiences">
-            <h2>Objetivos profissionais</h2>
-            <p>Atuar na área de Linguagens e suas Tecnologias integrada à Ciências Humanas Aplicadas, com foco em Literatura e Gramática da Língua Portuguesa, trabalhando com tradução, revisão, pesquisa, edição, análise e produção de textos literários e não-literários; bem como de materiais audiovisuais.</p>
-            <h2>Experiências</h2>
-            <ul class="experience">
-                <li>[experiência]</li>
-                <li>[experiência]</li>
-                <li>[experiência]</li>
-                <li>[experiência]</li>
-            </ul>
-        </section>
-        <section class="academical projects">
+        <!-- <section class="academical projects">
             <h2>Projetos acadêmicos</h2>
             <ul class="projects-list">
                 <li>[projeto 1]</li>
