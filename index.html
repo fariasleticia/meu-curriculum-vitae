@@ -41,7 +41,8 @@
         }
 
         p,
-        li {
+        li,
+        h5 {
             font-family: 'DM Sans', sans-serif;
         }
 
@@ -126,7 +127,8 @@
         }
 
         .courses,
-        .skills {
+        .skills,
+        .projects-list {
             display: flex;
         }
 
@@ -164,6 +166,47 @@
         .skills>div>ul {
             padding-left: 7%;
             padding-right: 2%;
+        }
+
+        /* estilização da seção de 'projetos acadêmicos' */
+        .my-projects {
+            background-image: url("images/fundo-livros.png");
+            background-size: cover;
+            padding-top: 3%;
+            padding-bottom: 4%;
+        }
+
+        .project {
+            width: 50%;
+            text-align: justify;
+        }
+
+        .pro1 {
+            margin: 2% 7% 1% 5%;
+        }
+
+        .pro2 {
+            margin: 2% 5% 1% 7%;
+        }
+
+        .project>img {
+            margin: auto;
+            display: block;
+        }
+
+        .project>h5 {
+            margin-bottom: 20px;
+            font-size: medium;
+        }
+
+        .project>h4 {
+            margin-bottom: -20px;
+            margin-top: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
@@ -266,15 +309,40 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="academical projects">
-            <h2>Projetos acadêmicos</h2>
-            <ul class="projects-list">
-                <li>[projeto 1]</li>
-                <li>[projeto 2]</li>
-                <li>[projeto 3]</li>
-            </ul>
+        <section class="my-projects">
+            <h2>Meus projetos</h2>
+            <div class="projects-list">
+                <div class="project pro1">
+                    <h4>Jornal Jovem</h4>
+                    <h5>Desde 2022</h5>
+                    <img src="images\projeto-jornal.jpg" alt="Jovens segurando um jornal" height="210px">
+                    <p>Desde o início do ano letivo de 2022, tenho participado como redatora do jornal escolar do SESI
+                        416, realizando diversas pesquisas e entrevistas sobre assuntos recorrentes na instituição.
+                        Participei das 3 últimas edições do Jornal e escrevi 4 matérias, com temas relacionados ao Novo
+                        Ensino Médio, os Itinerários Formativos do NEM, Projeto de Vida e divulgação dos projetos de
+                        robótica escolares - além de divulgar minhas produções literárias.
+                    </p>
+                    <p>Confira a matéria do SESI sobre nosso jornal <a
+                            href="https://saobernardo.sesisp.org.br/noticia/alunos-e-professores-produzem-jornal"><b>aqui</b>.</a>
+                        </p>
+                </div>
+                <div class="project pro2">
+                    <h4>Antologia “Fragmenta Amoris”</h4>
+                    <h5>De 10/2022 a 12/2022</h5>
+                    <img src="images\projeto-inauguracao.jpg"
+                        alt="Fotografia do evento de publicação do livro 'Fragmenta Amoris', com cada aluno segurando um exemplar do livro."
+                        height="210px">
+                    <p>Como atividade para conclusão do curso Laboratório de Jovens Escritores, produzi um livro sobre
+                        facetas do amor, voltado para o público jovem-adulto, em conjunto com meus colegas e
+                        professores. Para isso, escrevi o primeiro conto do livro, “Dama do Mar”, e auxiliei na
+                        organização do cronograma e da parte cerimonial do evento de publicação.</p>
+                    <p>Confira uma das reportagens sobre este projeto <a
+                            href="https://imprensaabc.com.br/2022/12/16/projeto-cultural-promove-a-estreia-de-jovens-escritores/"><b>aqui</b>.</a>
+                        </p>
+                </div>
+            </div>
         </section>
-        <section class="contact me">
+        <!-- <section class="contact me">
             <h2>Entre em contato</h2>
         </section> -->
     </div>
