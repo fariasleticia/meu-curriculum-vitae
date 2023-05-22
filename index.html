@@ -42,7 +42,10 @@
 
         p,
         li,
-        h5 {
+        h5,
+        label,
+        input,
+        textarea {
             font-family: 'DM Sans', sans-serif;
         }
 
@@ -208,6 +211,29 @@
             text-decoration: none;
             color: white;
         }
+
+        /* estilização do formulário */
+        .contact-me {
+            padding-top: 3%;
+            padding-bottom: 7%;
+        }
+        input[type=text],
+        textarea {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 15%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            background-color: rgb(56, 56, 92);
+            color: white;
+            font-weight: 200%;
+            border-style: none;
+            border-radius: 7px;
+        }
     </style>
 </head>
 
@@ -342,9 +368,18 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="contact me">
-            <h2>Entre em contato</h2>
-        </section> -->
+        <section class="contact-me">
+            <h2>Entre em contato!</h2>
+            <div id="forms">
+                <form action="">
+                    <label for="email">Insira seu email:</label><br>
+                    <input type="text" id="email" name="email"><br><br>
+                    <label for="message">Escreva sua mensagem:</label><br>
+                    <textarea name="message"></textarea><br><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 
