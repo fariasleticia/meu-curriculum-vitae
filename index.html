@@ -76,8 +76,41 @@
             font-size: 120%;
         }
 
+        /* estilização da barra de navegação */
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 30px;
+            top: 120px;
+            bottom: 150px;
+            width: 3%;
+            justify-content: space-evenly;
+            text-align: center;
+            list-style: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: medium;
+            font-weight: 700;
+            padding: 5px;
+            border-radius: 50px;
+            background-color: rgba(56, 56, 92, 0.5);
+        }
+
+        li a {
+            font-size: 300%;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #88cfb7;
+        }
+
         /* estilização da seção 'sobre mim/objetivo profissional' (descrição, foto e dados pessoais) */
-        .about-objective {
+        #about-objective {
             padding-top: 2.5%;
             padding-bottom: 4.5%;
         }
@@ -122,7 +155,7 @@
         }
 
         /* estilização da seção de formação + seção de habilidades*/
-        .formation {
+        #formation {
             background-image: url("images/imagem-formacao.png");
             background-size: cover;
             padding-top: 1%;
@@ -141,7 +174,7 @@
         }
 
         /* estilização da seção de habilidades */
-        .my-skills {
+        #my-skills {
             padding-top: 4%;
             padding-bottom: 5%;
         }
@@ -172,7 +205,7 @@
         }
 
         /* estilização da seção de 'projetos acadêmicos' */
-        .my-projects {
+        #my-projects {
             background-image: url("images/fundo-livros.png");
             background-size: cover;
             padding-top: 3%;
@@ -213,10 +246,11 @@
         }
 
         /* estilização do formulário */
-        .contact-me {
+        #contact-me {
             padding-top: 3%;
             padding-bottom: 3%;
         }
+
         input[type=text],
         textarea {
             width: 50%;
@@ -225,50 +259,75 @@
             box-sizing: border-box;
             resize: none;
         }
+
         textarea {
             padding-bottom: 100px;
         }
+
         input[type=submit] {
             width: 15%;
             padding: 12px 20px;
             box-sizing: border-box;
-            background-color: rgb(56, 56, 92);
+            background-color: #38385c;
             color: white;
             font-weight: 200%;
             border: none;
             border-radius: 7px;
             cursor: pointer;
         }
+
+        /* estilização do rodapé */
         footer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background-color: #8478b1;
-                height: 100px;
-                margin-top: 70px;
-                padding: 16px;
-            }
-            .social-media-icons > a > img {
-                width: 40px;
-                margin: 7px;
-            }
-            .subtexto {
-                font-family: 'DM Sans', sans-serif;
-                color: white;
-                font-size: 16px;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #8478b1;
+            height: 100px;
+            margin-top: 70px;
+            padding: 16px;
+        }
+
+        .social-media-icons>a>img {
+            width: 40px;
+            margin: 7px;
+        }
+
+        .subtexto {
+            font-family: 'DM Sans', sans-serif;
+            color: white;
+            font-size: 16px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="#about-objective">•</a>
+                </li>
+                <li>
+                    <a href="#formation">•</a>
+                </li>
+                <li>
+                    <a href="#my-skills">•</a>
+                </li>
+                <li>
+                    <a href="#my-projects">•</a>
+                </li>
+                <li>
+                    <a href="#contact-me">•</a>
+                </li>
+            </ul>
+        </nav>
         <header>
             <h1>Leticia F. Cassimiro</h1>
             <h3>Estudante do Ensino Médio, envolvida em pesquisas e projetos nas áreas de Linguagens e Ciências Humanas
             </h3>
         </header>
-        <section class="about-objective">
+        <section id="about-objective">
             <h2>Meu objetivo profissional</h2>
             <div class="info-me">
                 <div id="description">
@@ -295,7 +354,7 @@
                 </div>
             </div>
         </section>
-        <section class="formation">
+        <section id="formation">
             <h2>Minha formação</h2>
             <div class="courses">
                 <div>
@@ -324,7 +383,7 @@
                 </div>
             </div>
         </section>
-        <section class="my-skills">
+        <section id="my-skills">
             <h2>Minhas habilidades</h2>
             <div class="skills">
                 <div class="hard-list">
@@ -359,7 +418,7 @@
                 </div>
             </div>
         </section>
-        <section class="my-projects">
+        <section id="my-projects">
             <h2>Meus projetos</h2>
             <div class="projects-list">
                 <div class="project pro1">
@@ -374,7 +433,7 @@
                     </p>
                     <p>Confira a matéria do SESI sobre nosso jornal <a
                             href="https://saobernardo.sesisp.org.br/noticia/alunos-e-professores-produzem-jornal"><b>aqui</b>.</a>
-                        </p>
+                    </p>
                 </div>
                 <div class="project pro2">
                     <h4>Antologia “Fragmenta Amoris”</h4>
@@ -388,11 +447,11 @@
                         organização do cronograma e da parte cerimonial do evento de publicação.</p>
                     <p>Confira uma das reportagens sobre este projeto <a
                             href="https://imprensaabc.com.br/2022/12/16/projeto-cultural-promove-a-estreia-de-jovens-escritores/"><b>aqui</b>.</a>
-                        </p>
+                    </p>
                 </div>
             </div>
         </section>
-        <section class="contact-me">
+        <section id="contact-me">
             <h2>Entre em contato!</h2>
             <div id="forms">
                 <form action="">
