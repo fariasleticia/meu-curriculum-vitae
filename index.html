@@ -215,7 +215,7 @@
         /* estilização do formulário */
         .contact-me {
             padding-top: 3%;
-            padding-bottom: 7%;
+            padding-bottom: 3%;
         }
         input[type=text],
         textarea {
@@ -223,6 +223,10 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
+            resize: none;
+        }
+        textarea {
+            padding-bottom: 100px;
         }
         input[type=submit] {
             width: 15%;
@@ -231,9 +235,29 @@
             background-color: rgb(56, 56, 92);
             color: white;
             font-weight: 200%;
-            border-style: none;
+            border: none;
             border-radius: 7px;
+            cursor: pointer;
         }
+        footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: #8478b1;
+                height: 100px;
+                margin-top: 70px;
+                padding: 16px;
+            }
+            .social-media-icons > a > img {
+                width: 40px;
+                margin: 7px;
+            }
+            .subtexto {
+                font-family: 'DM Sans', sans-serif;
+                color: white;
+                font-size: 16px;
+            }
     </style>
 </head>
 
@@ -380,6 +404,23 @@
                 </form>
             </div>
         </section>
+        <footer>
+            <div class="social-media-icons">
+                <a href="https://github.com/fariasleticia">
+                    <img src="social-media-icons\icon_github.png" alt="github icon">
+                </a>
+                <a href="https://instagram.com/le_facassi">
+                    <img src="social-media-icons\icon_instagram.png" alt="instagram icon">
+                </a>
+                <a href="https://www.linkedin.com/in/leticia-farias-cassimiro/">
+                    <img src="social-media-icons\icon_linkedin.png" alt="linkedin icon">
+                </a>
+            </div>
+            <br>
+            <div class="subtexto">
+                Desenvolvido com ❤ por <b>Leticia Farias</b>
+            </div>
+        </footer>
     </div>
 </body>
 
